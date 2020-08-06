@@ -47,15 +47,23 @@ The priorities of swapping will be explaned in below sections
 
 ### Functions
 This package has 16 functions, there are some unique functions and others that repeated for edges and corners.
+
 ```setCube(sides)``` takes 1 dictionary input argument which is the cube sides, this function is used to store the cube state and this function must be executed before solving the cube
+
 ```displayCube()``` returns the current cube state (as a dictionary output) and it can be used to track the changes 
 ```displayEdgePriority()``` & ```displayCornerPriority()``` return the default edge or corner priorities (as a dictionary output)
+
 ```updateEdgePriority(edgePriority)``` & ```updateCornerPriority(cornerPriority)``` take 1 dictionary input argument which is the edge or corner priorities, these functions are used to update the priorities and you can only specify the updated items on your dictionary while the rest will be remaining unchanged
+
 ```getSolvedEdges()``` & ```getSolvedCorners()``` return a list of already solved cubies and return a None if there are no solved cubies
+
 ```solveEdges()``` & ```solveCorners()``` are used to solve the edges or corners, these return the solution sequence as a list output and return a None output if the edges or corners are already solved!
+
 ```indexEdgeSequence()``` & ```indexCornerSequence()``` return the solution sequence with its index and returns a None if the edges or corners are already solved. You can use the indexes to point in your cube
+
 ```currentEdgeBuffer()``` & ```currentCornerBuffer()``` return a sequence of the current buffer while swapping and return a None if the edges or corners are already solved
 ```parityCheck()``` this function is used to check if the number of swapping is odd or even. It returns 1 if the number is odd, 0 if the number is even, and None if the cube is already solved
+
 ```parityAlgorithm()``` this function is used to apply the parity algorithm if the solution has an odd parity
 
 ### Solving the cube
