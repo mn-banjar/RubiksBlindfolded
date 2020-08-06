@@ -20,9 +20,9 @@ the package requires only 3 inputs dictionaries: cube sides, edge priorities, an
             'R': ['D', 'F', 'B', 'D', 'R', 'D', 'F', 'R', 'D'],
             'D': ['F', 'U', 'U', 'D', 'D', 'B', 'F', 'L', 'L'],
             'B': ['L', 'U', 'R', 'B', 'B', 'L', 'B', 'B', 'D'],
-            'L': ['F', 'F', 'B', 'U', 'L', 'D', 'L', 'L', 'L']}```
+            'L': ['F', 'F', 'B', 'U', 'L', 'D', 'L', 'L', 'L']}
 			 
-```edgePriority = {0:['U',1,'B',1],
+edgePriority = {0:['U',1,'B',1],
                    1:['U',3,'L',1],
                    2:['U',7,'F',1],
                    3:['B',5,'L',3],
@@ -32,9 +32,9 @@ the package requires only 3 inputs dictionaries: cube sides, edge priorities, an
                    7:['D',1,'F',7],
                    8:['D',3,'L',7],
                    9:['D',5,'R',7],
-                   10:['D',7,'B',7]}```
+                   10:['D',7,'B',7]}
 
-```cornerPriority = {0:['U',2,'R',2,'B',0],
+cornerPriority = {0:['U',2,'R',2,'B',0],
                      1:['U',6,'L',2,'F',0],
                      2:['U',8,'F',2,'R',0],
                      3:['D',0,'F',6,'L',8],
