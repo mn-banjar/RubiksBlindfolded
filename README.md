@@ -15,32 +15,34 @@ First you have to import the package onto your script
 
 ### Inputs
 the package requires only 3 inputs dictionaries: cube sides, edge priorities, and corner priorities. Here are some example of how to write these dictionaries:
-```sides = {'U': ['D', 'B', 'U', 'L', 'U', 'U', 'R', 'R', 'B'],
-            'F': ['U', 'F', 'R', 'F', 'F', 'R', 'U', 'R', 'R'],
-            'R': ['D', 'F', 'B', 'D', 'R', 'D', 'F', 'R', 'D'],
-            'D': ['F', 'U', 'U', 'D', 'D', 'B', 'F', 'L', 'L'],
-            'B': ['L', 'U', 'R', 'B', 'B', 'L', 'B', 'B', 'D'],
-            'L': ['F', 'F', 'B', 'U', 'L', 'D', 'L', 'L', 'L']}
+```
+sides = {'U': ['D', 'B', 'U', 'L', 'U', 'U', 'R', 'R', 'B'],
+         'F': ['U', 'F', 'R', 'F', 'F', 'R', 'U', 'R', 'R'],
+         'R': ['D', 'F', 'B', 'D', 'R', 'D', 'F', 'R', 'D'],
+         'D': ['F', 'U', 'U', 'D', 'D', 'B', 'F', 'L', 'L'],
+         'B': ['L', 'U', 'R', 'B', 'B', 'L', 'B', 'B', 'D'],
+         'L': ['F', 'F', 'B', 'U', 'L', 'D', 'L', 'L', 'L']}
 			 
 edgePriority = {0:['U',1,'B',1],
-                   1:['U',3,'L',1],
-                   2:['U',7,'F',1],
-                   3:['B',5,'L',3],
-                   4:['L',5,'F',3],
-                   5:['F',5,'R',3],
-                   6:['R',5,'B',3],
-                   7:['D',1,'F',7],
-                   8:['D',3,'L',7],
-                   9:['D',5,'R',7],
-                   10:['D',7,'B',7]}
+                1:['U',3,'L',1],
+                2:['U',7,'F',1],
+                3:['B',5,'L',3],
+                4:['L',5,'F',3],
+                5:['F',5,'R',3],
+                6:['R',5,'B',3],
+                7:['D',1,'F',7],
+                8:['D',3,'L',7],
+                9:['D',5,'R',7],
+               10:['D',7,'B',7]}
 
 cornerPriority = {0:['U',2,'R',2,'B',0],
-                     1:['U',6,'L',2,'F',0],
-                     2:['U',8,'F',2,'R',0],
-                     3:['D',0,'F',6,'L',8],
-                     4:['D',2,'R',6,'F',8],
-                     5:['D',6,'L',6,'B',8],
-                     6:['D',8,'B',6,'R',8]}```
+                  1:['U',6,'L',2,'F',0],
+                  2:['U',8,'F',2,'R',0],
+                  3:['D',0,'F',6,'L',8],
+                  4:['D',2,'R',6,'F',8],
+                  5:['D',6,'L',6,'B',8],
+                  6:['D',8,'B',6,'R',8]}
+```
 The priorities of swapping will be explaned in below sections 
 
 ### Functions
@@ -67,13 +69,13 @@ As it was mentioned the algorithm is used a dictionary input to represent the cu
 
 Here is the cube structure, notice that the numbers represent the list indexes of each faces
 ```
-			 |            |
-			 | U0  U1  U2 |
-			 |            |
-			 | U3  U4  U5 |
-			 |            |
-			 | U6  U7  U8 |
-			 |____________|
+	     |            |
+	     | U0  U1  U2 |
+	     |            |
+             | U3  U4  U5 |
+	     |            |
+	     | U6  U7  U8 |
+	     |____________|
 |            |            |            |            |
 | L0  L1  L2 | F0  F1  F2 | R0  R1  R2 | B0  B1  B2 |
 |            |            |            |            |
@@ -81,37 +83,39 @@ Here is the cube structure, notice that the numbers represent the list indexes o
 |            |            |            |            |
 | L6  L7  L8 | F6  F7  F8 | R6  R7  R8 | B6  B7  B8 |
 |            |____________|            |            |
-			 |            |
-			 | D0  D1  D2 |
-			 |            |
-			 | D3  D4  D5 |
-			 |            |
-			 | D6  D7  D8 |
-			 |            |
+	     |            |
+	     | D0  D1  D2 |
+	     |            |
+	     | D3  D4  D5 |
+	     |            |
+	     | D6  D7  D8 |
+	     |            |
 ```
 
 ## Swapping priorities 
 You may need to change the buffer while solving the cube, this algorithm has swapping priorities for changing the edge and corner buffer
 The default priorities are:
-```edgePriority = {0:['U',1,'B',1],
-                   1:['U',3,'L',1],
-                   2:['U',7,'F',1],
-                   3:['B',5,'L',3],
-                   4:['L',5,'F',3],
-                   5:['F',5,'R',3],
-                   6:['R',5,'B',3],
-                   7:['D',1,'F',7],
-                   8:['D',3,'L',7],
-                   9:['D',5,'R',7],
-                   10:['D',7,'B',7]}```
+```
+edgePriority = {0:['U',1,'B',1],
+                1:['U',3,'L',1],
+                2:['U',7,'F',1],
+                3:['B',5,'L',3],
+                4:['L',5,'F',3],
+                5:['F',5,'R',3],
+                6:['R',5,'B',3],
+                7:['D',1,'F',7],
+                8:['D',3,'L',7],
+                9:['D',5,'R',7],
+               10:['D',7,'B',7]}
 
-```cornerPriority = {0:['U',2,'R',2,'B',0],
-                     1:['U',6,'L',2,'F',0],
-                     2:['U',8,'F',2,'R',0],
-                     3:['D',0,'F',6,'L',8],
-                     4:['D',2,'R',6,'F',8],
-                     5:['D',6,'L',6,'B',8],
-                     6:['D',8,'B',6,'R',8]}```
+cornerPriority = {0:['U',2,'R',2,'B',0],
+                  1:['U',6,'L',2,'F',0],
+                  2:['U',8,'F',2,'R',0],
+                  3:['D',0,'F',6,'L',8],
+                  4:['D',2,'R',6,'F',8],
+		  5:['D',6,'L',6,'B',8],
+                  6:['D',8,'B',6,'R',8]}
+```
 					 
 You can update the values by using these two functions ```updateEdgePriority(edgePriority)``` & ```updateCornerPriority(cornerPriority)``` 
 
