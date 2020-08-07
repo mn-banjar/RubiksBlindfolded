@@ -53,8 +53,8 @@ This package has 16 functions, there are some unique functions and others that r
 
 ```setCube(sides)``` takes 1 dictionary input argument which is the cube sides, this function is used to store the cube state and this function must be executed before solving the cube
 
-```displayCube()``` returns the current cube state (as a dictionary output) and it can be used to track the changes 
-
+```displayCube()``` returns the current cube state (as a dictionary output) and it can be used to track the changes
+ 
 ```displayEdgePriority()``` & ```displayCornerPriority()``` return the default edge or corner priorities (as a dictionary output)
 
 ```updateEdgePriority(edgePriority)``` & ```updateCornerPriority(cornerPriority)``` take 1 dictionary input argument which is the edge or corner priorities, these functions are used to update the priorities and you can only specify the updated items on your dictionary while the rest will be remaining unchanged
@@ -136,5 +136,4 @@ You can update the values by using these two functions ```updateEdgePriority(edg
 For faster solution, try not to print any unnecessary results
 
 ## Testing
-Clone the repository and run the ```test_algorithm.py``` script
-
+Clone the repository and run the ```test_package.py``` script
