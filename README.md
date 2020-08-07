@@ -72,7 +72,7 @@ This package has 16 functions, there are some unique functions and others that r
 
 ### Solving the cube
 There are some necessary steps you have to follow to get correct results:
-*  Don’t miss to set your cube by using this function ```setCube(sides)``` before appling the algorithm and execute any other functions 
+*  Don’t miss to set your cube by using this function ```setCube(sides)``` before applying the algorithm and executing any other functions 
 *  You can start solving either the edges or corners, but you have to apply the parity algorithm using this function ```parityAlgorithm()``` in between the two solving algorithms
 
 
