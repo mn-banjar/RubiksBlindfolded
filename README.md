@@ -14,7 +14,7 @@ This package is published on PyPI org and can be installed by this instruction:
 ```$ pip install RubiksBlindfolded```
 
 ## Usage
-First you have to import the package onto your script then you can use all the function as follows
+First you have to import the package onto your script then you can use all the function as follows:
 ```
 import RubiksBlindfolded
 
@@ -96,6 +96,7 @@ This package has 16 functions, there are some unique functions and others that r
 ```indexEdgeSequence()``` & ```indexCornerSequence()``` return the solution sequence with its index and returns a None if the edges or corners are already solved. You can use the indexes to point in your cube
 
 ```currentEdgeBuffer()``` & ```currentCornerBuffer()``` return a sequence of the current buffer while swapping and return a None if the edges or corners are already solved
+
 ```parityCheck()``` this function is used to check if the number of swapping is odd or even. It returns 1 if the number is odd, 0 if the number is even, and None if the cube is already solved
 
 ```parityAlgorithm()``` this function is used to apply the parity algorithm if the solution has an odd parity
