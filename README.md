@@ -3,21 +3,43 @@ This python package is about the solving algorithm of Rubik’s cube in blindfol
 
 It provides the solving sequence for edges and corners separately, the indexes of swapping cubies in the initial scrambled cube, also the parity check and specify if the number of swapping is odd or even. You can display the current cube state manually after each step to track the changes
 
+The solving algorithm is based on a previous project developed by javascript, you can see the project https://github.com/mn-banjar/RubiksCubeBlindfolded
+
+
 Memorizing the cubies is the hardest part for any beginner, making a visual tool may help you to reduce the load from your brain and you don’t need imagination!
 You can use the pacakge to build any blindfolded tool for beginners.
 
-
-The solving algorithm is based on a previous project developed by javascript, you can see the project https://github.com/mn-banjar/RubiksCubeBlindfolded
-
 ## Installation
-This package is published on PyPI org and can be installed by this instruction 
+This package is published on PyPI org and can be installed by this instruction:
 ```$ pip install RubiksBlindfolded```
 
 ## Usage
-First you have to import the package onto your script 
+First you have to import the package onto your script then you can use all the function as follows
+```
+import RubiksBlindfolded
+
+#scramble L
+sides = {'U': ['B', 'U', 'U', 'B', 'U', 'U', 'B', 'U', 'U'], 
+         'F': ['U', 'F', 'F', 'U', 'F', 'F', 'U', 'F', 'F'], 
+         'R': ['R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R'], 
+         'D': ['F', 'D', 'D', 'F', 'D', 'D', 'F', 'D', 'D'],
+         'B': ['B', 'B', 'D', 'B', 'B', 'D', 'B', 'B', 'D'],
+         'L': ['L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L']}
+
+
+RubiksBlindfolded.setCube(sides)
+
+print('corner sequence:')
+print(RubiksBlindfolded.solveCorners())
+
+RubiksBlindfolded.parityAlgorithm()
+
+print('edge sequence:')
+print(RubiksBlindfolded.solveEdges())
+```
 
 ### Inputs
-the package requires only 3 inputs dictionaries: cube sides, edge priorities, and corner priorities. Here are some example of how to write these dictionaries:
+The package requires only 3 inputs dictionaries: cube sides, edge priorities, and corner priorities. Here is an example of how to write these dictionaries:
 ```
 sides = {'U': ['D', 'B', 'U', 'L', 'U', 'U', 'R', 'R', 'B'],
          'F': ['U', 'F', 'R', 'F', 'F', 'R', 'U', 'R', 'R'],
@@ -77,10 +99,10 @@ There are some necessary steps you have to follow to get correct results:
 
 
 ## Cube structure
-As it was mentioned the algorithm is used a dictionary input to represent the cube, the keys are used to specify the face letters and the values are lists of 9 items. There are no unique labels for each stickers, the algorithm is based on the cubies structure and it is used a bunch stickers as one unit
+As it was mentioned the algorithm is used a dictionary input to represent the cube, the keys are used to specify the face letters and the values are lists of 9 items. There are no unique labels for each sticker, the algorithm is based on the cubies structure and it is used a bunch of stickers as one unit.
 
 
-Here is the cube structure, notice that the numbers represent the list indexes of each faces
+Here is the cube structure, notice that the numbers represent the list indexes of each face:
 ```
 	         |                |
 	         | U0    U1    U2 |
