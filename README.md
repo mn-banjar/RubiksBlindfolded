@@ -37,6 +37,14 @@ RubiksBlindfolded.parityAlgorithm()
 print('edge sequence:')
 print(RubiksBlindfolded.solveEdges())
 ```
+output:
+```
+corner sequence:
+[['L', 'B', 'D'], ['L', 'D', 'F'], ['L', 'F', 'U']]
+edge sequence:
+[['U', 'L'], ['B', 'L'], ['D', 'L'], ['F', 'L'], ['U', 'L']]
+>>> 
+```
 
 ### Inputs
 The package requires only 3 inputs dictionaries: cube sides, edge priorities, and corner priorities. Here is an example of how to write these dictionaries:
