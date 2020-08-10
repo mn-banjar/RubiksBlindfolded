@@ -163,8 +163,6 @@ cornerPriority = {0:['U',2,'R',2,'B',0],
 					 
 You can update the values by using these two functions ```updateEdgePriority(edgePriority)``` & ```updateCornerPriority(cornerPriority)``` 
 
-## Performance
-For faster solution, try not to print any unnecessary results
 
 ## Testing
 Clone the repository and run the ```test_package.py``` script
